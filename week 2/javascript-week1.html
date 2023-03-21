@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript exercise week 1</title>
+        <script src="./javascript-week1.js" type="text/javascript"></script>
+        <style>
+            section {
+                background-color: beige;
+                padding: 10px;
+                border: 1px solid gray;
+                margin-bottom: 10px;
+            }
+            section h2 {
+                margin-top: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript Excercise Week1</h1>
+
+        <section>
+            <h2>Button</h2>
+            <div>
+                <button onclick="helloWorld();">Say Hello</button>
+                <label id="lblHello"></label>
+            </div>
+        </section>
+
+        <section>
+            <h2>Take User Input</h2>
+            <div>
+                Name: <input id="username" type="text"><br/><br/>
+                Age: <input id="age" type="number"><br/><br/>
+                <button onclick="takeUserInput()">Enter</button>
+                <label id="displayUserInput"></label>
+            </div>
+        </section>
+
+        <section>
+            <h2>Using SELECT element</h2>
+            <select id="selectColor">
+                <option value='blue'>Blue</option>
+                <option value="red">Red</option>
+            </select>
+            <button onclick="selectColor()">Check Colour</button>
+            <label id="displaySelectColor"></label>
+        </section>
+
+        <section>
+            <h2>Using radio buttons</h2>
+            <input type="radio" name="myColor" checked id="radioRed" onclick="radioColor('red');"> Red
+            <input type="radio" name="myColor" id="radioBlue" onclick="radioColor('blue');"> Blue
+            <label id="displayRadioColor"></label>
+        </section>
+    </body>
+</html>

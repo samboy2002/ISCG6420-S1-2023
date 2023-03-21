@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercise in class</title>
+        <style>
+            .main {
+                background-color: cadetblue;
+                width: 500px;
+                height: 200px;
+                overflow: hidden;
+            }
+
+            @keyframes left2right {
+                0% {
+                    left: -100px;
+                    font-size: 15px;
+                }
+                25% {
+                    left: 100px;
+                    font-size: 15px;
+                }
+                75% {
+                    left: 100px;
+                    font-size: 50px;
+                }
+                100% {
+                    left: 100px;
+                    font-size: 25px;
+                }
+            }
+
+            .name {
+                position: relative;
+                animation-name: left2right;
+                animation-duration: 5s;
+                animation-fill-mode: both;
+            }
+
+            @keyframes right2left {
+                0% {
+                    margin-left: 510px;
+                }
+                100% {
+                    margin-left: 100px;
+                }
+            }
+            .welcome {
+                font-size: 50px;
+                width: 400px;
+                margin-top: 50px;
+                animation-name: right2left;
+                animation-duration: 5s;
+                animation-delay: 5s;
+                animation-fill-mode: both;
+            }
+
+            @keyframes imageRote {
+                0% {
+                    transform: rotate(180deg);
+                    left: -150px;
+                }
+                50% {
+                    transform: rotate(360deg);
+                    left: 100px;
+                }
+                100% {
+                    transform: rotate(180deg);
+                    left: -150px;
+                }
+            }
+            .image {
+                width: 150px;
+                position: relative;
+                top: -100px;
+                animation-name: imageRote;
+                animation-duration: 5s;
+                animation-delay: 10s;
+                animation-fill-mode: both;
+            }
+            .image > img {
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="name">Dapeng</div>
+            <div class="welcome">Welcome Home</div>
+            <div class="image"><img src="flower.webp"></div>
+        </div>
+    </body>
+</html>

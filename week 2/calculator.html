@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Example of the simple Calculator</title>
+        <script>
+            function MySum() {
+                var number1 = document.getElementById("number1").value;
+                var number2 = document.getElementById("number2").value;
+
+                var result = parseInt(number1)+parseInt(number2);
+
+                document.getElementById("result").innerHTML = result;
+            }
+
+            function MyCalculator(operator) {
+                var number3 = parseInt(document.getElementById('number3').value);
+                var number4 = parseInt(document.getElementById('number4').value);
+
+                var result = 0;
+                switch(operator) {
+                    case 'sum':
+                        result = number3 + number4;
+                        break;
+                    case 'subtract':
+                        result = number3 - number4;
+                        break;
+                    case 'multiply':
+                        result = number3 * number4;
+                        break;
+                    case 'division':
+                        result = number3 * 1.0 / number4;
+                        break;
+                }
+
+                document.getElementById('result2').innerHTML = result;
+            }
+        </script>
+        <style>
+            .button { width: 100px; background-color: blueviolet; border-radius: 10px;}
+            .input { width: 150px; height: 30px; background-color: yellow; font-family: "Comic Sans MS", cursive;}
+            th { background-color: cornflowerblue;}
+            td { background-color: aqua;}
+            #result2 { display: block; background-color: yellow; width: 150px; height: 30px; line-height: 30px;}
+        </style>
+    </head>
+    <body>
+    <div>
+        <h1>Example of the simple Calculator</h1>
+        <p>Please put your two numbers below:</p>
+        Number 1: <input id="number1" type="number">
+        <br/>
+        Number 2: <input id="number2" type="number">
+        <br/>
+        <button onclick="MySum()">Sum</button>
+
+        <p>Your result: <span id="result"></span></p>
+    </div>
+    <hr/>
+    <div>
+        <h1>Example of the simple Calculator</h1>
+        <p>Please put your two numbers below:</p>
+
+        <table border="1">
+            <tr>
+                <th>Number 1:</th>
+                <th>Calculation</th>
+                <th>Number 2:</th>
+                <th></th>
+                <th>Your Result:</th>
+            </tr>
+            <tr>
+                <td><input id="number3" type="number" class="input"></td>
+                <td style="width: 100px;text-align:center;">
+                    <button onclick="MyCalculator('sum')" class="button">Sum</button>
+                    <button onclick="MyCalculator('subtract')" class="button">Subtract</button>
+                    <button onclick="MyCalculator('multiply')" class="button">Multiply</button>
+                    <button onclick="MyCalculator('division')" class="button">Division</button>
+                </td>
+                <td><input id="number4" type="number" class="input"></td>
+                <td style="width: 50px; text-align:center;">=</td>
+                <td><span id="result2"></span></td>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>

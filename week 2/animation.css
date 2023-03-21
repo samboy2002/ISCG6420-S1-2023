@@ -1,0 +1,132 @@
+@keyframes colors {
+    0% { background-color: red; }
+    20% { background-color: orange; }
+    40% { background-color: yellow; }
+    60% { background-color: green; }
+    80% { background-color: blue; }
+    100% { background-color: purple; }
+}
+
+.clear {
+    clear: both;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+
+#colors {
+    width: 100%;
+    height: 50px;
+    animation-name: colors;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+
+#colors:hover {
+    animation-play-state: paused;
+}
+
+.transition>div {
+    width: 150px;
+    height: 20px;
+    margin: 5px;
+    
+    background-color: red;
+    transition-property: width;
+    transition-duration: 3s;
+}
+
+.transition>div:hover {
+    width: 500px;
+}
+
+.transition>.ease {
+    transition-timing-function: ease;
+}
+.transition>.ease-in {
+    transition-timing-function: ease-in;
+}
+.transition>.ease-out {
+    transition-timing-function: ease-out;
+}
+.transition>.ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+
+.transition>.linear {
+    transition-timing-function: linear;
+}
+.transition>.step-start {
+    transition-timing-function: step-start;
+}
+.transition>.step-end {
+    transition-timing-function: step-end;
+}
+.transition>.steps {
+    transition-timing-function: steps;
+}
+
+.rotate {
+    padding: 20px;
+}
+
+.rotate > img {
+    width: 150px;
+    transform: rotate(25deg)
+}
+.rotate > .top-center {
+    transform-origin: center top;
+}
+.rotate > .right-bottom {
+    transform-origin: 100% 100%;
+}
+.rotate > .right-top {
+    transform-origin: 100% 0%;
+}
+
+.translate > div {
+    width: 150px;
+    height: 90px;
+    background-color:antiquewhite;
+    float: left;
+    margin: 30px;
+}
+.translate > div > img {
+    width: 150px;
+    height: 90px;
+}
+
+.translate .trans-x {
+    transform: translateX(30px);
+}
+.translate .trans-y {
+    transform: translateY(30px);
+}
+.translate .trans-xy {
+    transform: translate(30px, 30px);
+}
+
+.translate .scale {
+    transform: scale(.75);
+}
+.translate .scale-x {
+    transform: scaleX(.75);
+}
+.translate .scale-y {
+    transform: scaleY(.75);
+}
+
+.translate .skew-x {
+    transform: skewX(15deg);
+}
+.translate .skew-y {
+    transform: skewY(30deg);
+}
+.translate .skew-xy {
+    transform: skew(15deg, 30deg);
+}

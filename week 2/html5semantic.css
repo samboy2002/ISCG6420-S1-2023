@@ -1,0 +1,52 @@
+header {
+    background-color: blue;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    padding: 5px;
+}
+nav {
+    height: 30px;
+    background-color: cadetblue;
+    padding: 5px;
+}
+aside {
+    width: 200px;
+    height: 500px;
+    padding: 5px;
+    background-color: antiquewhite;
+    grid-column: auto / span 1;
+}
+article {
+    padding: 10px;
+    background-color: cornflowerblue;
+    grid-column: auto / span 1;
+}
+section {
+    border: 1px solid darkblue;
+    margin-bottom: 5px;
+}
+.main {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 10px;
+}
+
+h1 {
+    background-color: bisque;
+    padding: 3px;
+    margin: 5px;
+}
+
+section {
+    background-color:greenyellow;
+    padding: 5px;
+    height: 200px;
+}
+
+footer {
+    background-color: dodgerblue;
+    padding: 5px;
+    text-align: center;
+}

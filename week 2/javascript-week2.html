@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript Exercise Week 2</title>
+        <script src="./javascript-week2.js" type="text/javascript"></script>
+        <style>
+            section {
+                background-color: beige;
+                padding: 10px;
+                border: 1px solid gray;
+                margin-bottom: 10px;
+            }
+            section h2 {
+                margin-top: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Javascript Excercise Week 2</h1>
+
+        <section>
+            <h2>Change text color and font size</h2>
+
+            <p id="txtExample1">JavaScript can change the style of an HTML element. Please test your page after each step and compare with online example.</p>
+            <button onclick="changeTextColor()">Change Color and Font Size</button>
+        </section>
+
+        <section>
+            <h2>Colour picker and JavaScript to change CSS property</h2>
+
+            Color: <input type="color" id="txtExample2" onchange="changeColorPicker()">
+            <label id="displayExample2" style="display:inline-block; width: 200px; height: 20px; border: 1 solid black; background-color:coral;"></label>
+        </section>
+
+        <section>
+            <h2>Input Range and JavaScript to change CSS property</h2>
+            <lable>Font Size: </lable>
+            <input type="range" id="changeFontSize" min="10" max="25" value="15"><button onclick="changeFontSize()">Change</button>
+
+            <p id="txtExample3" style="font-size: 15px;">JavaScript can change the style of an HTML element. Please test your page after each step and compare with online example.</p>
+        </section>
+
+        <section>
+            <h2>Selector and JavaScript to change CSS property</h2>
+            Font family: <select id="changeFontFamily">
+                <option value="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana">Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana</option>
+                <option value="Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana, ' sans-serif'">Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana, ' sans-serif'</option>
+            </select>
+            <button onclick="changeFontFamily()">Change Font Family</button>
+            <div id="example4">
+                <h3>How to learn coding fast?</h3>
+                <div><strong>To assist in your learning - courtesy of the <a href="#">Coding Dojo instructors</a> - here are seven tips on how to learn programming faster.</strong></div>
+                <div>
+                    <ol>
+                        <li>Learn by doing...</li>
+                        <li>Grasp the fundamentals for long-term benefits...</li>
+                        <li>Code by hand...</li>
+                        <li>Ask for help...</li>
+                        <li>Seek out more online resources...</li>
+                        <li>Don't just read the sample code...</li>
+                        <li>Take breaks when debugging...</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Exercise Task 1</h2>
+            Width: <input type="range" id="rangeWidth" min="100" max="400" value="100">
+            Height: <input type="range" id="rangeHeight" min="100" max="400" value="100">
+            Background: <input type="color" id="colorBackground">
+            Front: <input type="color" id="colorFront" value="#FFFFFF">
+            <button onclick="doTask1()">Change</button>
+            <div id="divTask1" style="width: 100px; height: 100px; margin-top: 20px; background-color:black;color:white">This is text for example</div>
+        </section>
+
+        <section>
+            <h2>Example Task 2</h2>
+            Font size: <input type="range" id="t2_fontSize" min="10" max="25" value="15">
+            Font color: <input type="color" id="t2_color" value="#000000">
+            Font family: <select id="t2_fontFamily">
+                <option value="Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana">Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana</option>
+                <option value="Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana, ' sans-serif'">Segoe, Segoe UI, DejaVu Sans, Trebuchet MS, Verdana, ' sans-serif'</option>
+            </select>
+            Font weight: <input type="range" id="t2_fontWeight" min="100" max="900" value="100">
+            <button onclick="doTask2()">Change</button>
+
+            <div id="divTask2" style="margin-top: 20px; font-weight:100;font-size:15px;">
+                To assist in your learning - courtesy of the <a href="#">Coding Dojo instructors</a> - here are seven tips on how to learn programming faster.
+            </div>
+        </section>
+    </body>
+</html>
