@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN“ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Address Book</title>
+
+  
+  <script type="text/javascript">
+    function addressBookItem (fname, lname, email) {
+        this.fname= fname;
+        this.lname = lname; 
+        this.email = email;
+    }
+	
+	addressBookItem.prototype.write = function() {
+        
+		 var adrbook = "<tr><td>"+ this.fname+"</td>";
+      	 adrbook += "<td>" + this.lname + "</td>";
+        adrbook += "<td>" + this.email + "</td></tr>";
+		
+        
+		document.write(adrbook);
+		
+		
+		
+		
+		
+		
+    }
+	
+</script>
+</head>
+<body> 
+    <script type="text/javascript">
+        var aB1 = new addressBookItem('Roger', 'Williams', 'rwilliams@gmail.com');
+        var aB2 = new addressBookItem ('Rose', 'Schultz', 'rose_s@earthlink.net');
+		
+		document.write("<table border = '1'><tr><th>First Name</th><th>Last Name</th><th>Email Address</th></tr>");
+		
+        aB1.write();
+        aB2.write();
+		
+		document.write("</table>");
+		
+
+		
+		
+		function append_row()
+		{
+			
+			var fname=prompt("Please enter your first name:","Your first name");
+			var lname=prompt("Please enter your last name:","Your last name");
+			var email=prompt("Please enter your email:","Your email");
+			
+			//retrive a table object using getElementbytagname
+			var tableObject= document.getElementsByTagName("table")[0];
+			
+			alert(tableObject.rows.length);
+			
+			//insert row
+			var tableRowObject = tableObject.insertRow();
+			
+			
+			//insert the first cell to a new row
+			var tableDataobject1 =  tableRowObject.insertCell();
+			
+			tableDataobject1.innerHTML = fname;
+			
+			
+			tableDataobject1.style.color = "green";
+			
+			
+			//insert the second cell to a new row
+			var tableDataobject2 =  tableRowObject.insertCell();
+			
+			tableDataobject2.innerHTML = lname;
+			
+			
+			
+			tableDataobject2.style.color = "green";
+			
+			//insert the third cell to a new row
+			var tableDataobject3 =  tableRowObject.insertCell();
+			
+			tableDataobject3.innerHTML = email;
+			
+			tableDataobject3.style.color = "green";
+			
+			
+			
+		
+			
+			
+			
+		}
+		
+		
+		
+    </script>
+	
+	
+	<input type="button" onclick="append_row()" value="Add a row">
+	
+</body>
+</html>

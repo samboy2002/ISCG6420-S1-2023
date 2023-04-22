@@ -1,0 +1,26 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    /* background-color: lightgray; */
+}
+
+#demo1 {
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 4fr 2fr 2fr; /* 这行是画了三列 */
+}
+
+.box1 {
+    grid-column: 1/3; /* 这个是占前两列 */
+    background-color: red;
+}
+
+.box2 {
+    grid-column: 3/4; /* 这个是占第三列 */
+    background-color: green;
+}

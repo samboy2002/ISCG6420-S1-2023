@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Week 4 Exercise in Class</title>
+        <script type="text/javascript" src="javascript.js"></script>
+        <style>
+            div {margin-bottom: 5px;}
+        </style>
+    </head>
+    <body>
+        <h1>Week 4 Exercis in Class</h1>
+
+        <div>
+            <button onclick="greeting()">Try Greeting</button>
+            <span id="txtGreeting"></span>
+        </div>
+        <div>
+            <button onclick="displayCars()">Display cars</button>
+            <span id="txtCars"></span>
+        </div>
+        <div>
+            <button onclick="displayNumbers()">Display numbers</button>
+            <span id="txtNumbers"></span>
+        </div>
+        <div>
+            <button id="btnEventHello">Say Hello</button>
+            <span id="txtEventHello"></span>
+        </div>
+        <div>
+            <input type="text" id="inputName">
+            <button id="btnSaveNameToLocalStorage">Save name to localstorage</button>
+            <button id="btnLoadNameFromLocalStorage">Load name from Localstorage</button>
+            <div id="displayName"></div>
+        </div>
+
+        <div>
+            <div id="firstPage" style="background-color:lightgreen; padding: 5px">
+                <p>This is the first page.</p>
+                <button type="button" id="btnNextPage" onclick="nextPage()">Next</button>
+            </div>
+            <div id="secondPage" style="background-color: lightpink; display: none;padding: 5px;">
+                <p>This is the second page.</p>
+                <button type="button" id="btnPreviousPage" onclick="previousPage()">Previous</button>
+            </div>
+        </div>
+
+        <div>
+            <h2>Exercise: pages and localstorage.</h2>
+            <div id="exerciseFirstPage" style="background-color: lightgreen; padding: 5px;">
+                <div><label>First Name: </label><input type="text" id="exerciseFirstName"></div>
+                <div><label>Last Name: </label><input type="text" id="exerciseLastName"></div>
+                <div><button id="btnExerciseNext">Next</button></div>
+            </div>
+            <div id="exerciseSecondPage" style="background-color: lightsalmon; padding: 5px; display: none;">
+                <div><label>Email: </label><input type="text" id="exerciseEmail"></div>
+                <div><label>Phone: </label><input type="text" id="exercisePhone"></div>
+                <div><button id="btnExercisePrevious">Previous</button></div>
+            </div>
+        </div>
+    </body>
+</html>

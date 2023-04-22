@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML Exercise</title>
+        <script src="./javascript.js"></script>
+        <script>
+            let a = "";
+            for (let i=0; i< 100; i++) {
+                a = a + i;
+            }
+            if (a==0){
+                
+            }
+            console.log(a);
+        </script>
+        <style>
+            #txtFontSize {
+                /* transition-property: 'font-size';
+                transition-duration: 1s; */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML Excercise</h1>
+
+        <h2>Print Numbers</h2>
+        <button id="btnDemo" onclick="printNumbers('outputNumbers')">Print Numbers</button>
+        <span id="outputNumbers"></span>
+
+        <h2>Change font size</h2>
+        <input id="rangeFontSize" type="range" min="12" max="50">
+        <button onclick="changeFontSize('rangeFontSize', 'txtFontSize')">Change Font Size</button>
+        <span id="txtFontSize">This is text for testing.</span>
+
+        <h2>Change color</h2>
+        <button onclick="changeColor('changeColor')">Change Color</button>
+        <span id="changeColor">The color of the text will be changed after the button clicked.</span>
+
+        <hr/>
+        <div style="border: 1px solid black; height: 500px; background-color:gray;"></div>
+    </body>
+</html>
