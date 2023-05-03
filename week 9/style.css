@@ -1,0 +1,24 @@
+body {
+    margin: 0px 10px;
+    background-color: lightgray;
+}
+
+#mainCanvas {
+    background-image: url('./images/sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.box {
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    background-color: gray;
+    border: 1px solid black;
+}

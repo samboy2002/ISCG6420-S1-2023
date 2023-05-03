@@ -17,13 +17,16 @@ function drawLine(id) {
     clearInterval(timeHandler);
 
     ctx.beginPath();
+    
     ctx.moveTo(10, 70);
     ctx.lineTo(300, 150);
     ctx.lineWidth = 3;
-    // ctx.stroke();
+    ctx.stroke();
+    
     ctx.lineTo(300, 70);
     ctx.lineWidth = 5;
-    // ctx.stroke();
+    ctx.stroke();
+
     ctx.lineTo(10, 70);
     ctx.lineWidth = 3;
     ctx.stroke();

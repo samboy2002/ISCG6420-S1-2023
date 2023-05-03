@@ -23,7 +23,7 @@
     height: 50px;
     animation-name: colors;
     animation-duration: 10s;
-    animation-iteration-count: infinite;
+    animation-iteration-count:infinite;
     animation-direction:alternate;
 }
 
